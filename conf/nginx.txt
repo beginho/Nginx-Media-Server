@@ -1,18 +1,18 @@
 #! /bin/sh
 
 ### BEGIN INIT INFO
-# Provides:          nginx
+# Provides:          nginx-rtmp
 # Required-Start:    $all
 # Required-Stop:     $all
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: starts the nginx web server
+# Short-Description: starts the nginx-rtmp web server
 # Description:       starts nginx using start-stop-daemon
 ### END INIT INFO
 
 
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-DAEMON=/usr/local/nginx/sbin/nginx
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/nginx/sbin
+DAEMON=/opt/nginx/sbin/nginx
 NAME=nginx
 DESC=UPG.GR MEDIA SERVER
 
@@ -28,28 +28,28 @@ set -e
 case "$1" in
   start)
         echo -n "Starting $DESC: "
-        start-stop-daemon --start --quiet --pidfile /usr/local/nginx/logs/$NAME.pid \
+        start-stop-daemon --start --quiet --pidfile /opt/nginx/logs/$NAME.pid \
                 --exec $DAEMON -- $DAEMON_OPTS
         echo "$NAME."
         ;;
   stop)
         echo -n "Stopping $DESC: "
-        start-stop-daemon --stop --quiet --pidfile /usr/local/nginx/logs/$NAME.pid \
+        start-stop-daemon --stop --quiet --pidfile /opt/nginx/logs/$NAME.pid \
                 --exec $DAEMON
         echo "$NAME."
         ;;
   restart|force-reload)
         echo -n "Restarting $DESC: "
         start-stop-daemon --stop --quiet --pidfile \
-                /usr/local/nginx/logs/$NAME.pid --exec $DAEMON
+                /opt/nginx/logs/$NAME.pid --exec $DAEMON
         sleep 1
         start-stop-daemon --start --quiet --pidfile \
-                /usr/local/nginx/logs/$NAME.pid --exec $DAEMON -- $DAEMON_OPTS
+                /opt/nginx/logs/$NAME.pid --exec $DAEMON -- $DAEMON_OPTS
         echo "$NAME."
         ;;
   reload)
       echo -n "Reloading $DESC configuration: "
-      start-stop-daemon --stop --signal HUP --quiet --pidfile /usr/local/nginx/logs/$NAME.pid \
+      start-stop-daemon --stop --signal HUP --quiet --pidfile /opt/nginx/logs/$NAME.pid \
           --exec $DAEMON
       echo "$NAME."
       ;;
