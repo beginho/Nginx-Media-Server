@@ -13,7 +13,7 @@
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/nginx/sbin
 DAEMON=/opt/nginx/sbin/nginx
-NAME=nginx
+NAME=nginx-rtmp
 DESC=UPG.GR MEDIA SERVER
 
 test -x $DAEMON || exit 0
