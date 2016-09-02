@@ -9,7 +9,6 @@ sudo mkdir ~/working
 cd ~/working
 wget http://nginx.org/download/nginx-1.11.3.tar.gz
 git clone https://github.com/arut/nginx-rtmp-module.git
-sudo /usr/sbin/update-rc.d -f nginx-rtmp defaults
 git clone https://github.com/beginho/Nginx-Media-Server.git
 cp ~/working/Nginx-Media-Server/conf/nginx.txt /etc/init.d/nginx-rtmp
 sudo chmod +x /etc/init.d/nginx-rtmp
