@@ -1,15 +1,10 @@
 #!/bin/bash
 sudo apt-get update -y
-sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php5-common php5-cli php5-fpm -y
-iptables -I INPUT -p tcp --dport 22 -j ACCEPT
-iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php5-common -y
+iptables -I INPUT -p tcp --dport 8081 -j ACCEPT
 iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
-mkdir /var/log/nginx/
-touch /var/log/nginx/error.log
-cd /etc/php5/cli
-sudo mv php.ini php.ini.backup
-sudo ln -s ../fpm/php.ini
-sudo service php5-fpm start
+mkdir /var/log/nginx-rtmp/
+touch /var/log/nginx-rtmp/error.log
 sudo mkdir ~/working
 cd ~/working
 git clone git://github.com/upggr/nginx.git
