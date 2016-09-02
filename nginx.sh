@@ -1,15 +1,17 @@
 #!/bin/bash
 sudo apt-get update -y
-sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php5-common -y
+sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common -y
 iptables -I INPUT -p tcp --dport 8081 -j ACCEPT
 iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
 mkdir /var/log/nginx-rtmp/
 touch /var/log/nginx-rtmp/error.log
 sudo mkdir ~/working
 cd ~/working
-git clone git://github.com/upggr/nginx.git
-git clone git://github.com/upggr/nginx-rtmp-module.git
-git clone git://github.com/upggr/UPG.GR-MEDIA-SERVER.git
+wget http://nginx.org/download/nginx-1.11.3.tar.gz
+git clone https://github.com/arut/nginx-rtmp-module.git
+sudo chmod +x /etc/init.d/nginx-rtmp
+sudo /usr/sbin/update-rc.d -f nginx-rtmp defaults
+git clone 
 cp ~/working/UPG.GR-MEDIA-SERVER/conf/nginx.txt /etc/init.d/nginx
 cp ~/working/UPG.GR-MEDIA-SERVER/conf/refresh.txt /etc/cron.daily/refreshwww
 sudo chmod +x /etc/cron.daily/refreshwww
