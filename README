@@ -5,6 +5,8 @@ This is simple bash builder for nginx with rtmp module, from UPG.GR-MEDIA-SERVER
 -nginx ver: mainline 1.11.3
 -nginx-rtmp module: git master
 -Installed under /opt, in order to keep system's nginx files (if any) untouched
+-modified nginx.conf with http server on 8081 port and rtmp server on (default) 1935 port
+-stat page for rtmp statistics (http://yourip:8081/stat)
 -Added rc script (for ubuntu and centos), called nginx-rtmp and adding it to default run-levels
 
 USAGE: 
