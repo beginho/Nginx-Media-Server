@@ -2,6 +2,7 @@
 yum -y install gcc gcc-c++ make zlib-devel pcre-devel openssl-devel
 iptables -I INPUT -p tcp --dport 8081 -j ACCEPT
 iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
+useradd -r nginx
 mkdir /var/log/nginx-rtmp/
 touch /var/log/nginx-rtmp/error.log
 sudo mkdir ~/working
