@@ -1,9 +1,12 @@
-Simple builder for nginx with rtmp module
+Nginx RTMP Server (nrs)
+
+This is simple builder for nginx with rtmp module, taken from UPG.GR-MEDIA-SERVER project...
 
 nginx ver: mainline 1.11.3
 nginx-rtmp module: git master
 
-curl -sL https://raw.githubusercontent.com/beginho/Nginx-Media-Server/master/nginx.sh | sudo bash -
+
+USAGE: curl -sL https://raw.githubusercontent.com/beginho/Nginx-Media-Server/master/nginx.sh | sudo bash -
 
 Tested with Ubuntu 14.04 Server
 
