@@ -9,7 +9,7 @@ cd ~/working
 wget http://nginx.org/download/nginx-1.11.3.tar.gz
 git clone https://github.com/arut/nginx-rtmp-module.git
 git clone https://github.com/beginho/nrs.git
-cp ~/working/nrs/conf/nginx.txt /etc/init.d/nginx-rtmp
+cp ~/working/nrs/conf/nginx_ubuntu.txt /etc/init.d/nginx-rtmp
 sudo chmod +x /etc/init.d/nginx-rtmp
 sudo /usr/sbin/update-rc.d -f nginx-rtmp defaults
 tar xf nginx-1.11.3.tar.gz
@@ -19,8 +19,7 @@ sudo make && make install
 mkdir /opt/nginx/html/live/
 mkdir /opt/nginx/html/live/hls/
 cp ~/working/nrs/conf/nginx.conf /opt/nginx/conf/nginx.conf
-ip=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )
-sed -i -- 's/replaceip/'"$ip"'/g' /opt/nginx/conf/nginx.conf
+cp ~/working/nrs/conf/stat.xml /opt/nginx/html/stat.xml
 rm -f /opt/nginx/conf/nginx.conf.default
 sudo rm -rf ~/working
 echo Finished!
