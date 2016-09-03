@@ -20,7 +20,7 @@ sudo make && make install
 mkdir /opt/nginx/html/live/
 mkdir /opt/nginx/html/live/hls/
 cp ~/working/nrs/conf/nginx.conf /opt/nginx/conf/nginx.conf
-cp ~/working/nrs/conf/stat.xml /opt/nginx/html/stat.xml
+cp ~/working/nrs/conf/stat.xml /opt/nginx/html/stat.xsl
 rm -f /opt/nginx/conf/nginx.conf.default
 sudo rm -rf ~/working
 echo Finished!
