@@ -3,6 +3,7 @@ sudo apt-get update -y
 sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common -y
 iptables -I INPUT -p tcp --dport 8081 -j ACCEPT
 iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
+useradd -r nginx
 mkdir /var/log/nginx-rtmp/
 touch /var/log/nginx-rtmp/error.log
 sudo mkdir ~/working
