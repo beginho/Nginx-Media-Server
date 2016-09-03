@@ -1,3 +1,5 @@
 Simple builder for nginx with rtmp module
 
 curl -sL https://raw.githubusercontent.com/beginho/Nginx-Media-Server/master/nginx.sh | sudo bash -
+
+Tested with Ubuntu 14.04 Server
