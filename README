@@ -2,9 +2,10 @@ Nginx RTMP Server (nrs)
 
 This is simple builder for nginx with rtmp module, from UPG.GR-MEDIA-SERVER project...
 
-nginx ver: mainline 1.11.3
-nginx-rtmp module: git master
-
+-nginx ver: mainline 1.11.3
+-nginx-rtmp module: git master
+-Installed under /opt, in order to keep system's nginx files (if any) untouched
+-Added rc script (for ubuntu and centos), called nginx-rtmp and adding it to default run-levels
 
 USAGE: 
 -clone & edit to your needs: 
@@ -19,4 +20,3 @@ USAGE:
 Tested with Ubuntu 14.04 Server and Centos 6.7
 
 TODO: 
-
