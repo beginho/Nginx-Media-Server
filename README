@@ -1,6 +1,6 @@
 Nginx RTMP Server (nrs)
 
-This is simple builder for nginx with rtmp module, from UPG.GR-MEDIA-SERVER project...
+This is simple bash builder for nginx with rtmp module, from UPG.GR-MEDIA-SERVER project...
 
 -nginx ver: mainline 1.11.3
 -nginx-rtmp module: git master
