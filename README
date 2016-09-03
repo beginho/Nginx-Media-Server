@@ -16,7 +16,7 @@ USAGE:
 -quick run w/o clonning CENTOS: 
   curl -sL https://raw.githubusercontent.com/beginho/nrs/master/nginx_centos.sh | sudo bash -
   
-Tested with Ubuntu 14.04 Server . . .
+Tested with Ubuntu 14.04 Server and Centos 6.7
 
 TODO: 
 
