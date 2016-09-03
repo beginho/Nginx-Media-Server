@@ -11,10 +11,10 @@ USAGE:
 -clone & edit to your needs: 
   git clone https://github.com/beginho/nrs.git
   
--quick run w/o clonning UBUNTU: 
+-quick run w/o cloning UBUNTU: 
   curl -sL https://raw.githubusercontent.com/beginho/nrs/master/nginx_ubuntu.sh | sudo bash -
 
--quick run w/o clonning CENTOS: 
+-quick run w/o cloning CENTOS: 
   curl -sL https://raw.githubusercontent.com/beginho/nrs/master/nginx_centos.sh | sudo bash -
   
 Tested with Ubuntu 14.04 Server and Centos 6.7
